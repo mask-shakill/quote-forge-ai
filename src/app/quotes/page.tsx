@@ -41,16 +41,26 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(
-        "https://qoute-maker-backend.vercel.app/generate",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text: prompt, language }),
-        }
-      );
+      const endpoint = process.env.NEXT_PUBLIC_GENERATIVE_API_ENDPOINT;
+
+      // Make sure the endpoint is valid
+      if (!endpoint) {
+        console.error("API endpoint is missing in environment variables.");
+        setError("Failed to load API endpoint.");
+        setLoading(false);
+        return;
+      }
+
+      console.log("API Endpoint:", endpoint); // Log the API endpoint for debugging
+
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: prompt, language }),
+      });
 
       const data = await response.json();
+
       if (data.quotes && data.quotes.length > 0) {
         const updatedQuotes: Quote[] = data.quotes.map(
           (quote: { quote: string; author: string }) => ({
