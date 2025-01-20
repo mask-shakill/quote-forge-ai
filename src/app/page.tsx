@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Search, Loader2 } from "lucide-react";
-import Header from "@/components/Header";
-import LoadingSVG from "@/components/LoadingSVG";
-import QuoteCard from "@/components/QuoteCard";
+import Header from "@/components/Header"; // If using a custom header component
+import LoadingSVG from "@/components/LoadingSVG"; // If using a custom loading component
+import QuoteCard from "@/components/QuoteCard"; // If using a custom QuoteCard component
 
 const languages = [
   "Bangla",
@@ -24,20 +24,31 @@ export default function Home() {
   const [language, setLanguage] = useState("English");
   const [loading, setLoading] = useState(false);
   const [quotes, setQuotes] = useState([]);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
     try {
-      const response = await fetch("http://127.0.0.1:8000/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: prompt, language }),
-      });
+      const response = await fetch(
+        "https://qoute-maker-backend.vercel.app/generate",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: prompt, language }),
+        }
+      );
+
       const data = await response.json();
-      setQuotes(data.quotes);
+      if (data.quotes && data.quotes.length > 0) {
+        setQuotes(data.quotes);
+      } else {
+        setError("No quotes generated. Please try a different prompt.");
+      }
     } catch (error) {
       console.error("Error generating quotes:", error);
+      setError("Failed to generate quotes. Please try again.");
     }
     setLoading(false);
   };
@@ -81,15 +92,22 @@ export default function Home() {
             </button>
           </div>
         </form>
+
         {loading ? (
           <div className="flex justify-center">
             <LoadingSVG />
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quotes.map((quote, index) => (
-              <QuoteCard key={index} quote={quote} />
-            ))}
+            {quotes.length > 0 ? (
+              quotes.map((quote, index) => (
+                <QuoteCard key={index} quote={quote} />
+              ))
+            ) : (
+              <p className="text-center text-red-500">
+                {error || "No quotes to display."}
+              </p>
+            )}
           </div>
         )}
       </main>
