@@ -1,8 +1,16 @@
-export default function LoadingSVG() {
+interface LoadingSVGProps {
+  size?: number;
+  color?: string;
+}
+
+export default function LoadingSVG({
+  size = 100,
+  color = "#2a53bc",
+}: LoadingSVGProps) {
   return (
     <svg
-      width="100"
-      height="100"
+      width={size}
+      height={size}
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -11,7 +19,7 @@ export default function LoadingSVG() {
         cy="50"
         r="45"
         fill="none"
-        stroke="#8B5CF6"
+        stroke={color}
         strokeWidth="8"
         strokeDasharray="200"
       >

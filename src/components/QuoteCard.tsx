@@ -5,7 +5,6 @@ import { Copy, Check, Bookmark } from "lucide-react";
 
 interface QuoteCardProps {
   quote: {
-    id: number;
     quote: string;
     author: string;
   };
@@ -23,19 +22,20 @@ export default function QuoteCard({ quote }: QuoteCardProps) {
 
   const handleBookmark = () => {
     setBookmarked(!bookmarked);
-    // Here you would typically save the bookmark state to local storage or a backend
   };
 
   return (
     <div className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
       <div>
-        <p className="text-lg mb-2">{quote.quote}</p>
+        <p className="text-lg mb-2 font-semibold text-[#2a53bc]">
+          {quote.quote}
+        </p>
         <p className="text-sm text-gray-600">{quote.author}</p>
       </div>
       <div className="flex justify-end mt-4">
         <button
           onClick={handleCopy}
-          className="text-purple-600 hover:text-purple-800 mr-2"
+          className="text-[#5982e7] hover:text-[#2a53bc] mr-2"
           title="Copy quote"
         >
           {copied ? <Check size={20} /> : <Copy size={20} />}
