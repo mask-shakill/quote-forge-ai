@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { Search, Loader2 } from "lucide-react";
 import Header from "@/components/Header"; // If using a custom header component
 import LoadingSVG from "@/components/LoadingSVG"; // If using a custom loading component
@@ -19,14 +19,20 @@ const languages = [
   "Kannada",
 ];
 
+interface Quote {
+  id: number;
+  quote: string;
+  author: string;
+}
+
 export default function Home() {
   const [prompt, setPrompt] = useState("");
   const [language, setLanguage] = useState("English");
   const [loading, setLoading] = useState(false);
-  const [quotes, setQuotes] = useState([]);
-  const [error, setError] = useState(null);
+  const [quotes, setQuotes] = useState<Quote[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -42,7 +48,15 @@ export default function Home() {
 
       const data = await response.json();
       if (data.quotes && data.quotes.length > 0) {
-        setQuotes(data.quotes);
+        // Add 'id' for each quote
+        const updatedQuotes: Quote[] = data.quotes.map(
+          (quote: { quote: string; author: string }, index: number) => ({
+            id: index + 1, // or use another logic to generate id
+            quote: quote.quote,
+            author: quote.author,
+          })
+        );
+        setQuotes(updatedQuotes);
       } else {
         setError("No quotes generated. Please try a different prompt.");
       }
@@ -100,9 +114,7 @@ export default function Home() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {quotes.length > 0 ? (
-              quotes.map((quote, index) => (
-                <QuoteCard key={index} quote={quote} />
-              ))
+              quotes.map((quote) => <QuoteCard key={quote.id} quote={quote} />)
             ) : (
               <p className="text-center text-red-500">
                 {error || "No quotes to display."}
