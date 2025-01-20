@@ -4,8 +4,8 @@ const Landing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
       <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 text-blue-800">
-          KothaLekha AI - Inspire with Every Word
+        <h1 className="text-2xl md:text-5xl lg:text-5xl font-bold mb-6 text-blue-800">
+          Quote and Caption AI - Inspire with Every Word
         </h1>
         <p className="text-xl md:text-2xl mb-12 text-gray-600 max-w-3xl mx-auto">
           Effortlessly create memorable captions and quotes, giving voice to
