@@ -1,5 +1,11 @@
 import Landing from "@/components/Landing";
+import WorkingProcess from "@/components/WorkingProcess";
 
 export default function Home() {
-  return <Landing />;
+  return (
+    <div>
+      <Landing />
+      <WorkingProcess />
+    </div>
+  );
 }
