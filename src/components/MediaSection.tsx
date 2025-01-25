@@ -17,14 +17,14 @@ const MediaSection = () => {
         <div className="space-y-6 order-2 md:order-1 lg:order-1 ">
           <div>
             <h2 className="text-sm text-blue-600 font-semibold mb-2">
-              WHO WE ARE
+              Kotha AI
             </h2>
             <h1 className="text-4xl font-bold mb-4">
-              Today's a better time to connect with people on social media.
+              Struggling to come up with the perfect quote or caption?
             </h1>
             <p className="text-gray-600">
-              Dignissim conubia phasellus potenti orci porttitor sollicitudin
-              morbi aptent rhoncus mollis magnis
+              With Q&C AI, we make content creation a breeze! Our AI generates
+              personalized social media captions and quotes in seconds. 🚀
             </p>
           </div>
 

@@ -55,24 +55,22 @@ export default function Landing() {
 
         {/* Main Content - Responsive text and spacing */}
         <div className="max-w-4xl mx-auto text-center pt-8 md:pt-16 lg:pt-20">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-6 lg:mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-6 lg:mb-8 leading-tight text-primary">
             Write content
             <br className="hidden sm:block" />
-            <span className="sm:inline">10x faster</span>
+            <span className="sm:inline text-secondary"> 10x faster</span>
           </h1>
 
           <div className="space-y-2 md:space-y-3 mb-6 md:mb-8 lg:mb-10">
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-              Give customers a structural experience they'll and come back.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-              Join #1 app to track your data.
+            <p className="text-base sm:text-lg md:text-xl  max-w-2xl mx-auto px-4">
+              Create impactful quotes and captions in seconds! Elevate your
+              social media presence effortlessly with our smart generator.
             </p>
           </div>
 
           <Link
-            href="/signup"
-            className="inline-flex items-center gap-2 bg-black text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-full hover:bg-gray-800 transition-colors"
+            href="/login"
+            className="inline-flex items-center gap-2 bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-full hover:bg-blue-600 transition-colors"
           >
             Sign up for free
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />

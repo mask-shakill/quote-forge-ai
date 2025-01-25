@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#dcebfe] sticky top-0 z-10 text-black">
+    <header className="bg-[#f4edf0]/30 backdrop-blur-md  sticky top-0 z-10 text-black">
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16 relative">
           {/* Mobile Menu Button - Left */}
@@ -36,7 +36,7 @@ const Header = () => {
             className="text-xl md:text-2xl font-bold flex items-center gap-x-2 text-[#1e40af] absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none"
           >
             <Quote className="w-6 h-6" />
-            <span className=" sm:inline">Q&C AI</span>
+            <span className=" sm:inline">ContentShark AI </span>
           </Link>
 
           {/* Desktop Navigation */}
