@@ -4,10 +4,10 @@ import { Play } from "lucide-react";
 
 export default function WorkingProcess() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-5 mt-20 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-10 lg:mb-16">
           How Ai writer works
         </h2>
 
@@ -38,7 +38,7 @@ export default function WorkingProcess() {
           <div className="space-y-12">
             {/* Step 1 */}
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center font-semibold">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white text-orange-500 flex items-center justify-center font-semibold">
                 1
               </div>
               <div className="space-y-3">
@@ -50,10 +50,10 @@ export default function WorkingProcess() {
                   copywriter.
                 </p>
                 <Link
-                  href="/get-started"
+                  href="/quotes"
                   className="inline-flex items-center text-orange-500 hover:text-orange-600 font-medium"
                 >
-                  Get Started
+                  Try Free
                   <svg
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ export default function WorkingProcess() {
 
             {/* Step 2 */}
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center font-semibold">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white text-orange-500 flex items-center justify-center font-semibold">
                 2
               </div>
               <div>
@@ -85,7 +85,7 @@ export default function WorkingProcess() {
 
             {/* Step 3 */}
             <div className="flex gap-6">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-500 flex items-center justify-center font-semibold">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white text-orange-500 flex items-center justify-center font-semibold">
                 3
               </div>
               <div>
@@ -97,7 +97,7 @@ export default function WorkingProcess() {
 
             {/* How It Works Button */}
             <button className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
-              How It Works
+              Try Free
               <Play className="w-4 h-4" />
             </button>
           </div>
