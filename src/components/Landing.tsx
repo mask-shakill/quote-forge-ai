@@ -1,37 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, User } from "lucide-react";
 
 export default function Landing() {
   return (
-    <div className="relative min-h-screen overflow-hidden ">
-      {/* Background Shapes - Responsive positioning */}
-      <div className="absolute left-0 top-1/4 w-[300px] md:w-[400px] lg:w-[600px] h-[300px] md:h-[400px] lg:h-[600px] -translate-x-1/4">
-        <svg
-          viewBox="0 0 200 200"
-          className="w-full h-full transform rotate-45"
-        >
-          <path
-            fill="#ecfccb"
-            d="M166.4,76.6c8.6,41.3-31.1,79.6-71.3,82.7C54.9,162.4,6.3,132.7,1.2,91.3C-4,49.9,37.7,6.8,79,2.7
-            C120.3-1.5,157.8,35.3,166.4,76.6z"
-          />
-        </svg>
-      </div>
-      <div className="absolute right-0 bottom-0 w-[300px] md:w-[400px] lg:w-[500px] h-[300px] md:h-[400px] lg:h-[500px] translate-x-1/4 translate-y-1/4">
-        <svg viewBox="0 0 200 200" className="w-full h-full">
-          <path
-            fill="#f1f5f9"
-            d="M166.4,76.6c8.6,41.3-31.1,79.6-71.3,82.7C54.9,162.4,6.3,132.7,1.2,91.3C-4,49.9,37.7,6.8,79,2.7
-            C120.3-1.5,157.8,35.3,166.4,76.6z"
-          />
-        </svg>
-      </div>
-
+    <div className="">
       {/* Content Container */}
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-12 lg:pt-16">
         {/* Creator Card - Responsive positioning and sizing */}
-        <div className="hidden md:block absolute left-4 lg:left-20 top-40 bg-white rounded-xl shadow-lg p-3 md:p-4 animate-float">
+        <div className="hidden md:block absolute left-4 lg:left-20 top-40 bg-white rounded-xl shadow-xl p-3 md:p-4 animate-float">
           <div className="flex items-center gap-2 md:gap-3">
             <div className="w-8 md:w-10 h-8 md:h-10 bg-orange-500 rounded-full flex items-center justify-center">
               <svg
@@ -49,7 +26,7 @@ export default function Landing() {
               </svg>
             </div>
             <div>
-              <div className="text-sm md:text-base font-semibold">Content</div>
+              <div className="text-sm md:text-base  font-semibold">Content</div>
               <div className="text-xs md:text-sm text-gray-600">
                 50K Creators
               </div>
@@ -68,13 +45,7 @@ export default function Landing() {
         {/* User Stats Card - Responsive positioning and sizing */}
         <div className="hidden md:block absolute right-4 lg:right-20 top-60 bg-white rounded-xl shadow-lg p-2 md:p-3 animate-float delay-150">
           <div className="flex items-center gap-2 md:gap-3">
-            <Image
-              src="/placeholder.svg?height=40&width=40"
-              alt="User"
-              width={40}
-              height={40}
-              className="w-8 h-8 md:w-10 md:h-10 rounded-full"
-            />
+            <User className="text-orange-600" size={50} />
             <div>
               <div className="text-sm md:text-base font-semibold">5k+</div>
               <div className="text-xs md:text-sm text-gray-600">Happy user</div>
@@ -84,10 +55,6 @@ export default function Landing() {
 
         {/* Main Content - Responsive text and spacing */}
         <div className="max-w-4xl mx-auto text-center pt-8 md:pt-16 lg:pt-20">
-          <p className="text-orange-500 font-medium text-sm sm:text-base mb-4 md:mb-6 tracking-wide">
-            Contis.ai MAKES CONTENT FAST & EASY
-          </p>
-
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-6 lg:mb-8 leading-tight">
             Write content
             <br className="hidden sm:block" />
@@ -140,13 +107,7 @@ export default function Landing() {
 
           <div className="bg-white rounded-xl shadow-lg p-3">
             <div className="flex items-center gap-2">
-              <Image
-                src="/placeholder.svg?height=32&width=32"
-                alt="User"
-                width={32}
-                height={32}
-                className="w-8 h-8 rounded-full"
-              />
+              <User className="text-orange-600" size={30} />
               <div>
                 <div className="text-sm font-semibold">5k+</div>
                 <div className="text-xs text-gray-600">Happy user</div>
