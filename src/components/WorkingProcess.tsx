@@ -7,8 +7,8 @@ export default function WorkingProcess() {
     <section className="py-5 mt-20 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-10 lg:mb-16">
-          How Ai writer works
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-4 md:mb-10 lg:mb-16 text-primary">
+          Master Content with AI Magic!
         </h2>
 
         {/* Content Grid */}
@@ -17,7 +17,7 @@ export default function WorkingProcess() {
           <div className="relative">
             <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
               {/* Browser Header */}
-              <div className="bg-gray-100 px-4 py-3 border-b flex items-center gap-2">
+              <div className="bg-gray-200 px-4 py-3 border-b flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -96,7 +96,7 @@ export default function WorkingProcess() {
             </div>
 
             {/* How It Works Button */}
-            <button className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+            <button className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
               Try Free
               <Play className="w-4 h-4" />
             </button>
