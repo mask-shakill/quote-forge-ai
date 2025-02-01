@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Star, User } from "lucide-react";
 
@@ -72,7 +71,7 @@ export default function Landing() {
             href="/login"
             className="inline-flex items-center gap-2 bg-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-full hover:bg-blue-600 transition-colors"
           >
-            Sign up for free
+            Explore for Free
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
         </div>

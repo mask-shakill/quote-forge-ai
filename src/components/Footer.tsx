@@ -1,3 +1,6 @@
+import { Quote } from "lucide-react";
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-[#f4edf0] text-gray-700 ">
@@ -7,7 +10,7 @@ const Footer = () => {
           Sign up for our newsletter to get updates, news, and free insights.
         </h3>
         <button className="px-8 py-3 bg-secondary text-white font-medium rounded-md">
-          Try For Free
+          <Link href={"/login"}>Try For Free</Link>
         </button>
       </div>
 
@@ -18,13 +21,15 @@ const Footer = () => {
           <div className="flex items-center space-x-2 mb-4">
             <div className="bg-blue-500 p-3 rounded-full">
               {/* Placeholder for Logo */}
-              <span className="text-lg font-bold text-white">S</span>
+              <span className="text-lg font-bold text-white">
+                <Quote />
+              </span>
             </div>
-            <h2 className="text-lg font-bold">Socio Academy</h2>
+            <h2 className="text-lg font-bold">ContentShark AI</h2>
           </div>
           <p className="text-gray-500">
-            Ornare congue mus pellentesque venenatis platea suscipit gravida
-            conubia feugiat nec metus.
+            Create impactful quotes and captions in seconds! Elevate your social
+            media presence effortlessly with our smart generator.
           </p>
           {/* Social Icons */}
           <div className="flex space-x-4 mt-4">
@@ -155,8 +160,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="bg-primary py-4">
         <div className="text-center text-white text-xs">
-          Copyright &copy; 2023 SocioAcademy. All rights reserved. Powered by
-          MoxCreative.
+          Copyright &copy; 2025 ContentShark AI All rights reserved.
         </div>
       </div>
     </footer>
