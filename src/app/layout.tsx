@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Next.js Firebase Auth",
+  title: "ContentShark AI",
   description: "A simple Next.js app with Firebase authentication",
 };
 

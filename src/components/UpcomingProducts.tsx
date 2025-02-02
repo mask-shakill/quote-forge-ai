@@ -14,16 +14,16 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: "AI Quote Master",
+    name: "AI Video Generation",
     description:
-      "Generate powerful quotes for any occasion with our advanced AI technology.",
+      "Generate powerful video reels with our advanced AI technology.",
     icon: <Quote className="w-8 h-8" />,
   },
   {
     id: 2,
-    name: "Caption Genius",
+    name: "AI Image Generation",
     description:
-      "Create engaging captions for your social media posts in seconds.",
+      "Create engaging captions and image for your social media posts in seconds.",
     icon: <MessageSquareQuote className="w-8 h-8" />,
   },
   {

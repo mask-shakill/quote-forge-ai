@@ -26,10 +26,13 @@ export default function WorkingProcess() {
               </div>
               {/* Browser Content */}
               <div className="p-4">
-                <img
-                  src="https://img.freepik.com/free-vector/flat-hand-drawn-cms-landing-page-template_23-2148807599.jpg?t=st=1737545928~exp=1737549528~hmac=92b472180819b6ae6a3ea868aa2b405f2156150d895670d7eea6d59a81422a16&w=740"
-                  alt=""
-                />
+                <Image
+                  className="w-full h-full object-cover"
+                  src={"/hero-img.png"}
+                  alt="image"
+                  height={500}
+                  width={500}
+                ></Image>
               </div>
             </div>
           </div>
